@@ -32,7 +32,8 @@ body{font-family: 'GowunBatang-Bold'; font-size: 20px; line-height: 40px;}
 
 /*banner*/
 
-#banner{width: 100%; height: 510px; background: gray;}
+#banner{width: 100%; height: 510px; background: url(../images/banner.jpg) no-repeat center top; position: relative;}
+#banner>span{width: 154.58px; height: 40px; color: #F0E4CF; font-size: 45px; position: absolute; top: 50%; left: 50%; font-family: 'GowunBatang-Regular'; margin: -20px 0 0 -77.29px;}
 
 
 /*contents*/
@@ -100,39 +101,59 @@ body{font-family: 'GowunBatang-Bold'; font-size: 20px; line-height: 40px;}
 
 
 /*slbox s*/
+            
+    /* 1depth 탭메뉴 디자인 IE10이상*/
+    .tabs.type1 {display: flex; width: 700px; padding-left: 235px;}
+    .tabs.type1 li {flex: 1; width: 150px;}
+    .tabs.type1 li a{border-right: 1px solid #583c3180; height: 22px; line-height: 22px;font-size: 18px;}
+    .tabs.type1 li:nth-child(4) a{border-right: none;} 
+    
+        /*
+        IE9이상
+        .tabs.type1:after { content:""; display:block; clear:both;}
+        .tabs.type1 li {float:left; width:25%; border: 1px solid grey; box-sizing:border-box;}
+        */
+ 
+    .tabs.type1 li a {display: block;}
+    .tabs.type1 li:hover a{color: #583c3197;}
+    /* .tabs.type1 li.on a { background: skyblue; } */
+    
+    /* 탭 콘텐츠 열고 닫힘설정 */
+    .tab_con {display: none;}
+    .tab_con.on {display: block;}
+
 
 .slbox_title{width: 1170px; margin: 0 auto; text-align: center;}
 
 .slbox_title>h2{font-size: 30px; text-align: center; padding-top: 130px; color: #583C31;}
-.slbox_title>p{font-size: 15px; text-align: center; color: #583C31; padding-bottom: 25px;}
+.slbox_title>p{font-size: 15px; text-align: center; color: #583C31; padding-bottom: 65px;}
+
+.tab{width: 1170px;}
+.tabs{width: 1170px;}
 
 
+.slbox_list{width:1170px; justify-content: center;}
+.slbox_list{margin-top:50px;}
 
-.slbox_list{font-size: 18px; text-align: center; color: #583C31; padding: 0px 0px 86px 252px;}
-.slbox_list li{float: left; padding: 0px;}
-.slbox_list li>a{border-left: 1px solid #583c3189; padding: 0px 35px;}
-.slbox_list li:first-child a{border-left: none;}
-.slbox_list li:hover a{color: #F0C599; background-color: #583c3178;}
+.slbox_img{float:left; width:583px; height: 430px; border: 2px solid #583C31;}
+.slbox_img img{width:100%; height: 100%;}
+.slbox_text{float:right; width:582px;}
+
+.slbox_table_title{width:480px;}
 
 
-#slbox> li.on div{}
-
-.slbox_list{width: 1170px; margin: 0 auto;}
-
-.slbox_img{float: left; width: 583px; height: 429px; border: 2px solid #583C31;}
-.slbox_img img{width: 583px;}
-
-.slbox_table_title{float: left; width: 580px; height: 100px; padding-top: 28px; box-sizing: border-box; color: #583C31;}
-.slbox_span{float: left; font-size: 36px; padding-left: 70px; padding-top: 10px;}
-.slbox_btn{float: left; width: 156px; height: 40px; margin-top: 12px; margin-left: 60px;}
-.slbox_btn a{display: block; color: #F0E4CF; text-align: center; background-color: #583C31;}
-.slbox_btn:hover a{color: #F0C599; background-color: #583c31da;}
-
-.slbox_table{ float: left; width: 580px; height: 300px; color: #583C31;}
+.slbox_span{display:inline-block; float:left; padding:37px 20px 25px 71px; font-size: 36px; color: #583C31;}
+.slbox_btn{display:inline-block;   padding:40px 0px;}
+.slbox_btn a{background-color: #583C31; color:#F0E4CF; 
+padding:7px 32px; width: 156px; height: 40px;}
+.slbox_btn:hover a{background-color: #583c31ba; color: #F0C599;}
+    
+.slbox_table{text-align: left; width:570px;}
 .slbox_table tr{width: 100%; box-sizing: border-box;}
-.slbox_table th{width: 130px; text-align: left; padding-left: 70px; font-size: 21px;}
+.slbox_table th{width: 130px; text-align: left; padding-left: 70px; font-size: 21px; color: #583C31;}
 .slbox_table td{font-size: 18px; color: #583c31c4;}
 .slbox_table tr:first-child td{line-height: 29px; padding-top: 20px;}
+
 
 
 
@@ -157,6 +178,8 @@ body{font-family: 'GowunBatang-Bold'; font-size: 20px; line-height: 40px;}
 .list2 li:nth-child(1) a{margin-top: 4px; margin-right: 2px;}
 .list2 li:nth-child(2) a{margin-top: 1px;}
 .list2 li:nth-child(3) a{margin-left: 30px; width: 12px;}
+
+.list2 li:hover img{opacity: 0.5;}
 
 
 .list3{float: left;  margin-top: 25px; font-size: 14px; color: #F0E4CF;}
